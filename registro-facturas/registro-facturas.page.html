@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar facturas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Bienvenidos al Login::</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Factura</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="formularioFactura">
+          <ion-item>
+            <ion-label position="floating">ID</ion-label>
+            <ion-input formControlName="id" type="number" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Fecha</ion-label>
+            <ion-input formControlName="fecha" type="date" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Articulo</ion-label>
+            <ion-input formControlName="articulo" type="text" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Subtotal</ion-label>
+            <ion-input formControlName="subtotal" type="float" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Iva</ion-label>
+            <ion-input formControlName="iva" type="float" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Descuento</ion-label>
+            <ion-input formControlName="descuento" type="float" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Total</ion-label>
+            <ion-input formControlName="total" type="float" placeholder="Ingrese su contraseña"></ion-input>
+          </ion-item>
+        </form>
+        <br>
+        <ion-button (click)="guardar()" expand="block">guardar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
